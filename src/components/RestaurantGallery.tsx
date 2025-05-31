@@ -4,7 +4,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 const RestaurantGallery = () => {
     return (
-      <section className="bg-black text-white py-10 px-4 text-center">
+      <section className="mt-10 sm:mt-20 bg-black/70 text-white py-10 px-4 text-center">
         <h2 className="text-2xl text-yellow-400 font-semibold mb-6">Restaurangen</h2>
   
         <div className="max-w-4xl mx-auto">
