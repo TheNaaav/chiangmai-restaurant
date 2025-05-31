@@ -20,21 +20,21 @@ const RestaurantGallery = () => {
           >
             <SwiperSlide>
               <img
-                src="/src/assets/1.jpg"
+                src="/images/1.jpg"
                 alt="Bild 1"
                 className="w-full h-[500px] object-cover rounded-lg"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src="/src/assets/2.jpg"
+                src="/images/2.jpg"
                 alt="Bild 2"
                 className="w-full h-[500px] object-cover rounded-lg"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src="/src/assets/3.jpg"
+                src="/images/3.jpg"
                 alt="Bild 3"
                 className="w-full h-[500px] object-cover rounded-lg"
               />
