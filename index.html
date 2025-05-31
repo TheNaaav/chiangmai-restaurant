@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/iconCMTK.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO -->
+    <meta name="description" content="Chiang Mai Thai Kitchen i Helsingborg – Äkta thailändsk mat med traditionell smak, lunch & middag. Boka bord idag!" />
+    <meta name="keywords" content="Chiang Mai Thai Kitchen, thaimat Helsingborg, Thai restaurang Helsingborg, pad thai, curry, thaimat" />
+    <meta name="author" content="Chiang Mai Thai Kitchen" />
+    
+    <!-- Open Graph för sociala medier -->
+    <meta property="og:title" content="Chiang Mai Thai Kitchen i Helsingborg" />
+    <meta property="og:description" content="Upplev äkta thailändska smaker i hjärtat av Helsingborg. Lunch, middag och takeaway!" />
+    <meta property="og:image" content="/iconCMTK.png" />
+    <meta property="og:url" content="https://example.com" /> <!-- Ersätt med din faktiska URL -->
+    <meta property="og:menu" content="https://example.com/meny" /><!-- Ersätt med din faktiska URL -->
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:locale" content="sv_SE" />
+    <meta property="og:site_name" content="Chiang Mai Thai Kitchen" />
+    <meta property="og:address" content="Bruksgatan 29, Helsingborg, 25224, SE" />
+
+    
+    <meta name="robots" content="index, follow" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Chiang Mai Thai Kitchen",
+        "image": "/iconCMTK.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Bruksgatan 29",
+          "addressLocality": "Helsingborg",
+          "postalCode": "25224",
+          "addressCountry": "SE"
+        },
+        "telephone": "+4642214522",
+        "url": "https://example.com",
+        "servesCuisine": "Thailändskt",
+        "priceRange": "100–200 kr",
+        "menu": "https://example.com/meny",
+        "acceptsReservations": true,
+        "servesVegetarianFood": true,
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Monday",
+            "opens": "10:00",
+            "closes": "21:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "11:00",
+            "closes": "21:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "12:00",
+            "closes": "22:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "14:00",
+            "closes": "22:00"
+          }
+        ]
+      }
+    </script>
+
+    <title>Chiang Mai Thai Kitchen</title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
