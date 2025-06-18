@@ -22,21 +22,21 @@ const RestaurantGallery = () => {
               <img
                 src="/images/1.jpg"
                 alt="Bild 1"
-                className="w-full h-[500px] object-cover rounded-lg"
+                className="w-full h-[500px] object-contain sm:object-cover rounded-lg"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src="/images/2.jpg"
                 alt="Bild 2"
-                className="w-full h-[500px] object-cover rounded-lg"
+                className="w-full h-[500px] object-contain sm:object-cover rounded-lg"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src="/images/3.jpg"
                 alt="Bild 3"
-                className="w-full h-[500px] object-cover rounded-lg"
+                className="w-full h-[500px] object-contain sm:object-cover rounded-lg"
               />
             </SwiperSlide>
           </Swiper>

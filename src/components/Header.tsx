@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { FaFacebook, FaPhone } from 'react-icons/fa6';
 
@@ -8,15 +9,14 @@ const Header = () => {
   return (
     <header className="bg-black text-yellow-400 sticky top-0 z-50">
       <div className="flex justify-between items-center px-4 py-3 max-w-7xl mx-auto">
-        {/* Logo + Namn */}
-        <div className="flex items-center gap-2">
-          <span className="font-semibold text-lg">Chiang Mai Thai Kitchen</span>
-        </div>
+        <Link to="/" className="text-2xl font-bold">
+          Chiang Mai Thai Kitchen
+        </Link>
 
-        {/* Desktop-navigering */}
+        {/* Desktop Nav */}
         <nav className="hidden md:flex gap-6 items-center text-sm">
-          <a href="/" className="hover:text-white">Hem</a>
-          <a href="#meny" className="hover:text-white">Meny</a>
+          <Link to="/" className="hover:text-white">Hem</Link>
+          <Link to="/meny" className="hover:text-white">Meny</Link>
           <a href="tel:042214522" className="flex items-center gap-1 hover:text-white">
             <FaPhone /> 042-21 45 22
           </a>
@@ -36,18 +36,18 @@ const Header = () => {
           </a>
         </nav>
 
-        {/* Mobil-knapp */}
+        {/* Mobile Hamburger */}
         <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden">
           <FaBars className="text-yellow-400 text-xl" />
         </button>
       </div>
 
-      {/* Mobil-meny */}
+      {/* Mobile Menu */}
       {menuOpen && (
-        <div className="text-center pb-6 space-y-4 md:hidden">
+        <div className="md:hidden px-4 pb-6 space-y-4 text-center">
           <nav className="space-y-2 text-lg">
-            <a href="/" className="block">Hem</a>
-            <a href="#meny" className="block">Meny</a>
+            <Link to="/" className="block">Hem</Link>
+            <Link to="/meny" className="block">Meny</Link>
           </nav>
           <div className="flex justify-center items-center gap-2">
             <FaPhone />
@@ -62,9 +62,12 @@ const Header = () => {
               <FaFacebook />
             </a>
           </div>
-          <button className="bg-red-600 text-white font-semibold py-2 px-4 rounded">
+          <a
+            href="#"
+            className="bg-red-600 text-white font-semibold py-2 px-4 rounded hover:bg-red-700 inline-block"
+          >
             Beställ från foodora
-          </button>
+          </a>
         </div>
       )}
     </header>

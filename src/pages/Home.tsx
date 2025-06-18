@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 const Home = () => {
     return (
       <div>
@@ -14,12 +15,20 @@ const Home = () => {
                 Upplev glädjen i thailändska smaker med utsökta rätter och en varm, inbjudande atmosfär.
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
-                <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded shadow-md">
-                VISA MENY
-                </button>
-                <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded shadow-md">
-                Beställ från foodora
-                </button>
+                <Link to="/meny">
+                  <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded shadow-md">
+                    VISA MENY
+                  </button>
+                </Link>
+                <a
+                    href="https://www.foodora.se/restaurant/s5cs/chiang-mai-thai-kitchen " // <-- byt ut med riktig länk
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded shadow-md">
+                      Beställ från foodora
+                    </button>
+                  </a>
             </div>
             </div>
         </div>
