@@ -29,7 +29,7 @@ const Header = () => {
             <FaFacebook />
           </a>
           <a
-            href="#"
+            href="https://www.foodora.se/restaurant/s5cs/chiang-mai-thai-kitchen"
             className="bg-red-600 text-white px-3 py-2 rounded font-semibold text-sm hover:bg-red-700"
           >
             Beställ från foodora
