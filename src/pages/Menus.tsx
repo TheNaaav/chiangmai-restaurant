@@ -4,9 +4,11 @@ import meny3 from '../assets/meny3.jpg';
 import bgImage from '../assets/BGMain.png';
 
 const Menus = () => {
+  const menyBilder = [meny1, meny2, meny3];
+
   return (
     <div
-      className="min-h-screen text-white px-4 py-10"
+      className="text-white min-h-screen"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: 'cover',
@@ -14,16 +16,27 @@ const Menus = () => {
         backgroundAttachment: 'fixed',
       }}
     >
-        <div className="min-h-screen px-4 py-10 text-center text-white">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-yellow-300 drop-shadow">Vår Meny</h1>
-        <p className="mb-8">Här kommer hela menyn med bilder och priser senare 🥢</p>
+      {/* Titel */}
+      <div className="text-center py-10 px-4 bg-black/70">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-yellow-300 drop-shadow">
+          Vår Meny
+        </h1>
+        <p className="mb-4 text-sm sm:text-base">
+          Här kommer hela menyn med bilder och priser senare 🥢
+        </p>
+      </div>
 
-        <div className="flex flex-col items-center gap-8">
-            <img src={meny1} alt="Meny 1" className="w-full sm:w-[90%] md:w-[70%] max-w-2xl rounded-lg shadow-xl" />
-            <img src={meny2} alt="Meny 2" className="w-full sm:w-[90%] md:w-[70%] max-w-2xl rounded-lg shadow-xl" />
-            <img src={meny3} alt="Meny 3" className="w-full sm:w-[90%] md:w-[70%] max-w-2xl rounded-lg shadow-xl" />
-        </div>
-        </div>
+      {/* Menybilder */}
+      <div className="flex flex-col items-center gap-2 px-1 pb-4">
+        {menyBilder.map((img, i) => (
+          <img
+            key={i}
+            src={img}
+            alt={`Meny ${i + 1}`}
+            className="w-full max-w-4xl rounded-xl shadow-2xl"
+          />
+        ))}
+      </div>
     </div>
   );
 };

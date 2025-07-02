@@ -25,7 +25,15 @@ const App = () => {
               <MapSection />
             </>
           } />
-          <Route path="/meny" element={<Menus />} />
+          <Route
+            path="/meny"
+            element={
+              <>
+                <Menus />
+                <MapSection /> {/* 👈 Lägg till här */}
+              </>
+            }
+          />
         </Routes>
         <Footer />
       </Router>
