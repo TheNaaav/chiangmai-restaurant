@@ -50,7 +50,15 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold text-lg mb-3 text-white">Följ oss:</h3>
           <div className="flex gap-4 text-2xl mb-6">
-            <a href="https://www.facebook.com/profile.php?id=100091732471946" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100091732471946"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Följ oss på Facebook"
+              title="Följ oss på Facebook"
+            >
+              <FaFacebook />
+            </a>
           </div>
           <p className="text-sm text-white/80">
             © 2025{' '}

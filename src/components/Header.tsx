@@ -1,10 +1,37 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaBars } from 'react-icons/fa';
-import { FaFacebook, FaPhone } from 'react-icons/fa6';
+import { useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { FaBars, FaFacebook, FaPhone } from 'react-icons/fa6';
+import { FaTimes } from 'react-icons/fa';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+
+  // Stäng meny vid sidbyte (t.ex. klick på "Meny")
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location]);
+
+  // Klick utanför stänger menyn
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
+        setMenuOpen(false);
+      }
+    };
+
+    if (menuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuOpen]);
 
   return (
     <header className="bg-black text-yellow-400 sticky top-0 z-50">
@@ -13,7 +40,7 @@ const Header = () => {
           Chiang Mai Thai Kitchen
         </Link>
 
-        {/* Desktop Nav */}
+        {/* Desktop Menu */}
         <nav className="hidden md:flex gap-6 items-center text-sm">
           <Link to="/" className="hover:text-white">Hem</Link>
           <Link to="/meny" className="hover:text-white">Meny</Link>
@@ -25,6 +52,7 @@ const Header = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white text-lg"
+            aria-label="Följ oss på Facebook"
           >
             <FaFacebook />
           </a>
@@ -36,15 +64,22 @@ const Header = () => {
           </a>
         </nav>
 
-        {/* Mobile Hamburger */}
-        <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden">
-          <FaBars className="text-yellow-400 text-xl" />
+        {/* Burger Menu Button */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden"
+          aria-label={menuOpen ? "Stäng meny" : "Öppna meny"}
+        >
+          {menuOpen ? <FaTimes className="text-yellow-400 text-xl" /> : <FaBars className="text-yellow-400 text-xl" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden px-4 pb-6 space-y-4 text-center">
+        <div
+          ref={menuRef}
+          className="md:hidden px-4 pb-6 space-y-4 text-center bg-black bg-opacity-95"
+        >
           <nav className="space-y-2 text-lg">
             <Link to="/" className="block">Hem</Link>
             <Link to="/meny" className="block">Meny</Link>
@@ -58,6 +93,7 @@ const Header = () => {
               href="https://www.facebook.com/profile.php?id=100091732471946"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Följ oss på Facebook"
             >
               <FaFacebook />
             </a>
