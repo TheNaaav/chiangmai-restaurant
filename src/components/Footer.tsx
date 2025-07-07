@@ -23,7 +23,7 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-x-6">
             <div>
               <p>Måndag: 11–22</p>
-              <p>Tisdag: 11–22</p>
+              <p>Tisdag: 11–15</p>
               <p>Onsdag: 11–22</p>
               <p>Torsdag: 11–22</p>
               <p>Fredag: 11–22</p>

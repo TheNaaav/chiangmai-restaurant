@@ -9,7 +9,7 @@ const OpeningHours = () => {
           <div className="border border-yellow-500 p-4 rounded-md text-left sm:flex sm:justify-between sm:space-x-8 font-poppins">
             <div className="mb-4 sm:mb-0">
               <p>Måndag: 11–22</p>
-              <p>Tisdag: 11–22</p>
+              <p>Tisdag: 11–15</p>
               <p>Onsdag: 11–22</p>
               <p>Torsdag: 11–22</p>
               <p>Fredag: 11–22</p>
