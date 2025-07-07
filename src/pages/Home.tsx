@@ -8,8 +8,8 @@ const Home = () => {
         >
             <div className=" mt-10 sm:mt-20 bg-black/60 p-6 rounded-xl max-w-xl w-full text-center text-white shadow-lg">
             <h2 className="text-xl mb-2 drop-shadow-md">Välkommen till</h2>
-            <h1 className="text-3xl font-bold font-serif mb-4 text-yellow-300 drop-shadow-lg">
-                Chiang Mai Thai Kitchen
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-yellow-300 drop-shadow-lg font-serif">
+              Chiang Mai Thai Kitchen
             </h1>
             <p className="text-sm sm:text-base max-w-md mb-6 mx-auto drop-shadow-md">
                 Upplev glädjen i thailändska smaker med utsökta rätter och en varm, inbjudande atmosfär.

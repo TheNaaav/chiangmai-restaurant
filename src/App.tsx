@@ -10,10 +10,10 @@ import Menus  from './pages/Menus';
 
 const App = () => {
   return (
-    <div
-      className="min-h-screen bg-cover bg-center text-white"
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
+      <div
+        className="min-h-screen bg-cover bg-center bg-no-repeat md:bg-fixed text-white"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
       <Router>
         <Headers />
         <Routes>
