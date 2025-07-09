@@ -27,7 +27,7 @@ const RestaurantGallery = () => {
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src="/images/2.jpg"
+                src="/images/22.jpg"
                 alt="Bild 2"
                 className="w-full h-[500px] object-contain sm:object-cover rounded-lg"
               />
