@@ -1,32 +1,46 @@
 const OpeningHours = () => {
-    return (
-      <section className="mt-10 sm:mt-20 flex items-center justify-center px-4 bg-cover bg-center">
-        <div className="bg-black/70 text-white p-6 rounded-xl max-w-2xl w-full shadow-lg text-center">
-          <h2 className="text-2xl text-yellow-400 font-semibold mb-6 border-b border-yellow-500 inline-block pb-1">
-            Öppettider
-          </h2>
+  const days = [
+    { day: "Måndag", time: "11 – 22" },
+    { day: "Tisdag", time: "11 – 15" },
+    { day: "Onsdag", time: "11 – 22" },
+    { day: "Torsdag", time: "11 – 22" },
+    { day: "Fredag", time: "11 – 22" },
+    { day: "Lördag", time: "12 – 22" },
+    { day: "Söndag", time: "12 – 22" },
+  ];
 
-          <div className="border border-yellow-500 p-4 rounded-md text-left sm:flex sm:justify-between sm:space-x-8 font-poppins">
-            <div className="mb-4 sm:mb-0">
-              <p>Måndag: 11–22</p>
-              <p>Tisdag: 11–15</p>
-              <p>Onsdag: 11–22</p>
-              <p>Torsdag: 11–22</p>
-              <p>Fredag: 11–22</p>
+  return (
+    <section className="py-20 flex items-center justify-center px-4 relative overflow-hidden">
+      {/* Glas-boxen */}
+      <div className="bg-black/40 backdrop-blur-lg text-neutral-200 p-10 sm:p-16 rounded-[40px] max-w-2xl w-full shadow-2xl border border-white/5 text-center">
+        
+        <span className="text-xs uppercase tracking-[0.3em] text-neutral-400 mb-4 block font-medium">
+          Besök oss på Söder
+        </span>
+        
+        <h2 className="text-4xl sm:text-5xl text-[#FFCC00] font-serif font-bold mb-10 drop-shadow-md">
+          Öppettider
+        </h2>
+
+        <div className="space-y-3 max-w-sm mx-auto">
+          {days.map((item) => (
+            <div key={item.day} className="flex justify-between items-center border-b border-white/5 pb-2 transition-colors hover:border-[#FFCC00]/30">
+              <span className="font-medium text-neutral-200">{item.day}</span>
+              <span className="text-[#FFCC00] font-semibold">{item.time}</span>
             </div>
-            <div>
-              <p>Lördag: 12–22</p>
-              <p>Söndag: 12–22</p>
-              <p>Helgdagar: 12–22</p>
-              <p className="text-yellow-400 mt-4 text-sm">
-                (Sveriges nationaldag) Öppettiderna kan variera
-              </p>
-            </div>
+          ))}
+          
+          <div className="mt-8 pt-4">
+            <p className="text-neutral-200 font-medium italic">Helgdagar: 12 – 22</p>
+            <p className="text-neutral-500 mt-2 text-[10px] sm:text-xs uppercase tracking-widest">
+              Öppettiderna kan variera vid röda dagar
+            </p>
           </div>
         </div>
-      </section>
-    );
-  };
-  
-  export default OpeningHours;
+      </div>
+    </section>
+  );
+};
+
+export default OpeningHours;
   

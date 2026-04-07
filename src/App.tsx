@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import bgImage from './assets/BGMain.png';
 import Home from './pages/Home';
 import Headers from './components/Header';
 import OpeningHours from './components/OpeningHours';
@@ -7,11 +6,12 @@ import RestaurantGallery from './components/RestaurantGallery';
 import Footer from './components/Footer';
 import MapSection from './components/MapSection';
 import Menus  from './pages/Menus';
+import bgImage from './assets/bg.png';
 
 const App = () => {
   return (
-      <div
-        className="min-h-screen bg-cover bg-center bg-no-repeat md:bg-fixed text-white"
+      <div 
+        className=" bg-blend-overlay bg-cover bg-center md:bg-fixed bg-no-repeat text-neutral-200 font-sans selection:bg-[#FFCC00] selection:text-black"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
       <Router>
@@ -30,7 +30,7 @@ const App = () => {
             element={
               <>
                 <Menus />
-                <MapSection /> {/* 👈 Lägg till här */}
+                <MapSection /> 
               </>
             }
           />
