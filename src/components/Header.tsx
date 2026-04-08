@@ -88,7 +88,9 @@ const Header = () => {
               <a href="https://facebook.com..." className="text-white"><FaFacebook /></a>
             </div>
             <a
-              href="https://foodora.se..."
+              href="https://www.foodora.se/restaurant/s5cs/chiang-mai-thai-kitchen"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#D70F64] text-white font-bold py-3 px-8 rounded-full hover:bg-[#b00d52] transition-all w-full max-w-xs"
             >
               Beställ från foodora
